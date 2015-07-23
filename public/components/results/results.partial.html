@@ -1,0 +1,12 @@
+
+
+<section class="results container" ng-if="results.length">
+  <ul ng-repeat="(key, job) in results">
+    <li>
+      <h3>{{job.jobtitle}}</h3>
+      <h4 class="pull-right inline jobtitle">{{job.company}}</h4>
+      <!-- <span>{{job.formattedLocation}}</span> -->
+      <p>{{job.snippet}}</p>
+    </li>
+  </ul>
+</section>

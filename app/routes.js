@@ -1,9 +1,11 @@
 var controller = require('./controllers/indeed.controller'),
-          path = require('path');
+    path = require('path');
 
 module.exports = function(app) {
-    app.get('/api/get', controller.getJobs);
-    app.get('/api/search', controller.searchJobs);
+
+    
+    app.get('/api/search/:query', controller.searchJobs);
+    app.get('/api/get/:keys', controller.getJobs);
 
     app.get('*', function(req, res) {
         res.sendFile('index.html', {

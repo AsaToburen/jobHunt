@@ -1,0 +1,21 @@
+{
+  "name": "jobHunt",
+  "version": "0.0.0",
+  "homepage": "https://github.com/AsaToburen/jobHunt",
+  "authors": [
+    "Asa Toburen <atopettit@gmail.com>"
+  ],
+  "main": "server.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.13.0",
+    "bootstrap-sass": "~3.3.5"
+  }
+}
