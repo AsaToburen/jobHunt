@@ -1,6 +1,6 @@
 //exposing library to work with indeed api
 
-var api = require('indeed-api').getInstance('2731093791160532');
+var api = require('indeed-api').getInstance(2731093791160532);
 
 module.exports.searchJobs = function(req, res) {
     var userInput = JSON.parse(req.params.query);
@@ -32,11 +32,13 @@ module.exports.searchJobs = function(req, res) {
 
 module.exports.getJobs = function(req, res) {
 
-    //var jobkeys = ["6a293ed4c08fe90c", "3c609d8c08b9297e", ...];
+
+    var jobkeys = [req.params.keys];
 
     api.GetJob().WhereJobKeys(jobkeys).Retrieve(
         function(results) {
             // do something with the success results 
+            res.json(results);
             console.log(results);
         },
         function(error) {

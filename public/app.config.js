@@ -9,9 +9,9 @@ angular.module('jobHunt')
                 templateUrl: 'components/home/home.view.html',
                 controller: 'homeCtrl'
             })
-            .when('/search', {
-                templateUrl: 'components/search/search.view.html',
-                controller: 'searchCtrl'
+            .when('/jobdetail/:key', {
+                templateUrl: 'components/detail/detail.view.html',
+                controller: 'detailCtrl'
             })
             .otherwise({
                 redirectTo: '/'

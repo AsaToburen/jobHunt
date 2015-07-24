@@ -1,17 +1,22 @@
 'use strict';
 
 angular.module('jobHunt')
-    .controller('homeCtrl', ['$scope', '$http', function($scope, $http) {
+    .controller('homeCtrl', ['$scope', 'indeedService', '$location', '$anchorScroll',
+        function($scope, indeedService, $location, $anchorScroll) {
 
-        $scope.userInput = {};
+            $scope.userInput = {};
 
-        $scope.searchJobs = function(userInput) {
-            console.log(JSON.stringify(userInput));
+            var scrollToResults = function() {
+                $location.hash('results');
+                $anchorScroll();
+            };
 
-            return $http.get('/api/search/' + JSON.stringify(userInput))
-                .success(function(data) {
-                    $scope.results = data.results;
-                });
-        };
-
-    }]);
+            $scope.searchJobs = function(userInput) {
+                indeedService.searchJobs(userInput)
+                    .then(function(data) {
+                        $scope.results = data.results;
+                        scrollToResults();
+                    });
+            };
+        }
+    ]);

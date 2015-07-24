@@ -1,2 +1,51 @@
+header {
+    height: 55em;
+    background-image: url('../images/indeed_bg.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    nav.navbar-inverse {
+        padding: .5em;
+        div.navbar-header {
+            margin-left: 5em;
+        }
+        img {
+            border-radius: 8em;
+        }
+    }
+    div.form-container.container {
+        position: relative;
+        top: 17em;
+    }
+    form {
+        input {
+            margin: 0 .5em;
+            font-size: 1.5em;
+        }
+        input[type="text"] {
+            padding: 1.5em;
+        }
+        select[name="state"] {
+            height: 3em;
+            width: 2em;
+        }
+        input[type="submit"] {
+            background-color: #256aed;
+            color: #fff;
+            padding: .7em;
+            &:hover {
+                color: #d3d3d3;
+                background-color: #256aed;
+            }
+        }
+    }
+}
 
-
+nav.navbar-inverse {
+    padding: .5em;
+    div.navbar-header {
+        margin-left: 5em;
+    }
+    img {
+        border-radius: 8em;
+    }
+}

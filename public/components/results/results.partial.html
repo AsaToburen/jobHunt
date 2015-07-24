@@ -1,12 +1,17 @@
-
-
-<section class="results container" ng-if="results.length">
-  <ul ng-repeat="(key, job) in results">
-    <li>
-      <h3>{{job.jobtitle}}</h3>
-      <h4 class="pull-right inline jobtitle">{{job.company}}</h4>
-      <!-- <span>{{job.formattedLocation}}</span> -->
-      <p>{{job.snippet}}</p>
-    </li>
-  </ul>
+<section class="results container" ng-if="results">
+    <div class="heading">
+        <h2>Results</h2>
+    </div>
+    <ul class="list-unstyled">
+        <li ng-repeat="job in results">
+            <a ng-href="#/jobdetail/{{job.jobkey}}">
+                <h3>{{job.jobtitle}}</h3>
+                <h4 class="pull-right inline jobtitle">{{job.company}}</h4>
+                <span>{{job.formattedLocation}}</span>
+                <p>{{job.snippet}}</p>
+                <p>{{job.jobkey}}</p>
+            </a>
+        </li>
+    </ul>
 </section>
+s

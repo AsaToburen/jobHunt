@@ -1,5 +1,26 @@
-section.results {
-    h4.jobtitle {
-        padding-top: 1em;
+html {
+  height: auto;
+}
+
+div.jumbotron {
+  background-image: url('../images/job_search.jpg');
+  background-size: cover;
+  background-position: 50% 46%;
+  height: 18em;
+}
+
+
+section#results {
+    li {
+      background-color: default;
+      transition: background-color .2s linear;
+      padding: 2em;
+        h4.jobtitle {
+            padding-top: 1em;
+        }
     }
+}
+
+section.detail {
+  
 }
