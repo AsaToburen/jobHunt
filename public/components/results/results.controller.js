@@ -15,22 +15,6 @@ angular.module('jobHunt')
                     console.log(indeedService.searchResults);
                 });
 
-            //var evalItems = function() {
-            //    if (storageService.getData('results')) {
-            //        console.log(storageService.getData('results'));
-            //        $scope.results = storageService.getData('results');
-//
-            //    } else {
-            //        indeedService.searchJobs(indeedService.searchInput)
-            //            .then(function(results) {
-            //                $scope.results = results;
-            //                console.log(JSON.stringify(results));
-            //                storageService.setData('results', JSON.stringify(results));
-            //            });
-            //    }
-            //};
-            //evalItems();
-
 
             //belongs in navigation
 
