@@ -1,12 +1,15 @@
 <navigation></navigation>
-<section class="results container" ng-if="results">
-    <div class="container">
+<section id="results" class="results container">
+    <div ng-if="search == true" class="container">
+        <img src="../images/Preloader_2.gif" alt="Preloader">
+    </div>
+    <div class="container" ng-if="results">
         <div class="heading">
             <h2 ng-if="!saved">Results</h2>
             <h2 ng-if="saved">Saved Jobs</h2>
         </div>
         <ul class="list-unstyled">
-            <li ng-repeat="job in results">
+            <li ng-repeat="job in results track by $index">
                 <a ng-href="#/jobdetail/{{job.jobkey}}">
                     <h3>{{job.jobtitle}}</h3>
                 </a>
