@@ -3,6 +3,11 @@
 angular.module('jobHunt', ['ngRoute', 'ngResource']);
 
 angular.module('jobHunt')
+    .service('angularFilepicker', ['$window', function($window) {
+        return $window.filepicker;
+    }]);
+
+angular.module('jobHunt')
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/', {
@@ -12,6 +17,10 @@ angular.module('jobHunt')
             .when('/jobdetail/:key', {
                 templateUrl: 'components/detail/detail.view.html',
                 controller: 'detailCtrl'
+            })
+            .when('/resume/', {
+                templateUrl: 'components/resume/resume.view.html',
+                controller: 'resumeCtrl'
             })
             .otherwise({
                 redirectTo: '/'

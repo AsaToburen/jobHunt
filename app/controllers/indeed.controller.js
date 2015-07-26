@@ -1,5 +1,4 @@
 //exposing library to work with indeed api
-
 var api = require('indeed-api').getInstance(2731093791160532);
 
 module.exports.searchJobs = function(req, res) {
@@ -31,7 +30,6 @@ module.exports.searchJobs = function(req, res) {
 };
 
 module.exports.getJobs = function(req, res) {
-
 
     var jobkeys = [req.params.keys];
 

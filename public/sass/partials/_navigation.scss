@@ -1,15 +1,16 @@
 header {
-    height: 55em;
+    height: 54em;
     background-image: url('../images/indeed_bg.jpg');
     background-position: 50% 50%;
     background-size: cover;
+    transition: height 5s linear;
     nav.navbar-inverse {
         padding: .5em;
         div.navbar-header {
             margin-left: 5em;
         }
         img {
-            border-radius: 8em;
+            border-radius: .8em;
         }
     }
     div.form-container.container {
@@ -40,12 +41,16 @@ header {
     }
 }
 
+//header.collapse {
+//    height: 10em;
+//}
+
 nav.navbar-inverse {
     padding: .5em;
     div.navbar-header {
-        margin-left: 5em;
+        margin-left: 8em;
     }
     img {
-        border-radius: 8em;
+        border-radius: 4em;
     }
 }

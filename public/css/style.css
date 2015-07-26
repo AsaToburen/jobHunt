@@ -5801,27 +5801,58 @@ html {
 div.jumbotron {
   background-image: url("../images/job_search.jpg");
   background-size: cover;
-  background-position: 50% 46%;
-  height: 18em; }
+  background-position: 50% 46%; }
 
-section#results li {
-  background-color: default;
+section.results h2 {
+  border-bottom: 5px solid #333333; }
+section.results li {
+  background-color: #EEEEEE;
   transition: background-color .2s linear;
-  padding: 2em; }
-  section#results li h4.jobtitle {
-    padding-top: 1em; }
+  padding: 1em;
+  margin: 1em 0;
+  overflow: auto;
+  width: 100%; }
+  section.results li a {
+    display: inline-block; }
+  section.results li h3 {
+    display: inline-block;
+    margin-top: .1em;
+    margin-bottom: .7em; }
+  section.results li h5 {
+    display: inline-block; }
+  section.results li p {
+    margin-bottom: 0;
+    margin-top: 10px; }
+  section.results li p.snippet {
+    width: 80%;
+    padding-left: 1em;
+    display: inline-block; }
+  section.results li i.glyphicon {
+    width: 6em;
+    font-size: 2em;
+    padding-left: 6em;
+    top: -11px; }
+
+section.resume {
+  height: 95em; }
+  section.resume iframe {
+    width: 77%;
+    display: block;
+    margin: 0 auto;
+    height: 40em; }
 
 header {
-  height: 55em;
+  height: 54em;
   background-image: url("../images/indeed_bg.jpg");
   background-position: 50% 50%;
-  background-size: cover; }
+  background-size: cover;
+  transition: height 5s linear; }
   header nav.navbar-inverse {
     padding: .5em; }
     header nav.navbar-inverse div.navbar-header {
       margin-left: 5em; }
     header nav.navbar-inverse img {
-      border-radius: 8em; }
+      border-radius: .8em; }
   header div.form-container.container {
     position: relative;
     top: 17em; }
@@ -5844,9 +5875,9 @@ header {
 nav.navbar-inverse {
   padding: .5em; }
   nav.navbar-inverse div.navbar-header {
-    margin-left: 5em; }
+    margin-left: 8em; }
   nav.navbar-inverse img {
-    border-radius: 8em; }
+    border-radius: 4em; }
 
 
 

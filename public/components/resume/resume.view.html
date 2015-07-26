@@ -1,0 +1,5 @@
+<navigation></navigation>
+<section class="resume">
+    <button ng-click="pickFile()">PICK FILE</button>
+    <iframe ng-if="previewId" ng-src="{{trustSrc(previewId)}}"></iframe>
+</section>

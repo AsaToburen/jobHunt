@@ -31,7 +31,10 @@
   "dependencies": {
     "body-parser": "^1.13.2",
     "bower": "^1.4.1",
+    "box-view": "^2.0.0",
+    "connect-busboy": "0.0.2",
     "express": "^4.13.1",
+    "filepreviews": "^2.0.0",
     "indeed-api": "^1.0.0",
     "method-override": "^2.3.3",
     "mongodb": "^2.0.36",

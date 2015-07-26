@@ -3,7 +3,6 @@ var controller = require('./controllers/indeed.controller'),
 
 module.exports = function(app) {
 
-    
     app.get('/api/search/:query', controller.searchJobs);
     app.get('/api/get/:keys', controller.getJobs);
 
