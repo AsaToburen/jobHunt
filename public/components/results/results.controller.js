@@ -1,8 +1,9 @@
+
 'use strict';
 
 angular.module('jobHunt')
-    .controller('resultsCtrl', ['$scope', 'indeedService', '$location',
-        function($scope, indeedService, $location) {
+    .controller('resultsCtrl', ['$scope', 'indeedService', 'storageService', '$location', '$anchorScroll',
+        function($scope, indeedService, storageService, $location, $anchorScroll) {
 
             $scope.search = true;
 
@@ -14,6 +15,23 @@ angular.module('jobHunt')
                     $scope.results = indeedService.searchResults;
                     console.log(indeedService.searchResults);
                 });
+
+            //var evalItems = function() {
+            //    if (storageService.getData('results')) {
+            //        console.log(storageService.getData('results'));
+            //        $scope.results = storageService.getData('results');
+            //
+            //    } else {
+            //        indeedService.searchJobs(indeedService.searchInput)
+            //            .then(function(results) {
+            //                $scope.results = results;
+            //                console.log(JSON.stringify(results));
+            //                storageService.setData('results', JSON.stringify(results));
+            //            });
+            //    }
+            //};
+            //evalItems();
+
 
             //belongs in navigation
 
@@ -30,7 +48,6 @@ angular.module('jobHunt')
             $scope.saveJob = function(jobKey) {
                 if (indeedService.savedJobs.indexOf(jobKey) == -1) {
                     indeedService.savedJobs.push(jobKey);
-
                 } else {
                     indeedService.savedJobs.splice(indeedService.savedJobs.indexOf(jobKey), 1);
                 }

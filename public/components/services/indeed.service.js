@@ -6,10 +6,13 @@ angular.module('jobHunt')
 
             var indeedObj = {
 
-                savedJobs : [],
+                searchResults: [],
+                savedJobs: [],
                 savedResume: '',
+                searchInput: '',
 
                 searchJobs: function(userInput) {
+                    console.log(indeedObj.searchResults);
                     var deferred = $q.defer();
                     $http.get('/api/search/' + JSON.stringify(userInput))
                         .success(function(data) {
