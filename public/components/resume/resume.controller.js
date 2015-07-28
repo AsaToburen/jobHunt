@@ -5,7 +5,7 @@ angular.module('jobHunt')
         function($scope, $sce, indeedService, angularFilepicker) {
 
             $scope.files = [];
-            
+
             angularFilepicker.setKey('AR4zdwe5SD6L3K1nFTgCyz');
 
             $scope.pickFile = pickFile;

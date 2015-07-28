@@ -1,9 +1,12 @@
 <navigation></navigation>
 <section id="results" class="results container">
-    <div ng-if="search == true" class="container">
-        <img src="../images/Preloader_2.gif" alt="Preloader">
+    <div class="jumbotron vis-content" ng-if="results == undefined && saved">
+        <h1>You have not saved any jobs yet.</h1>
     </div>
-    <div class="container" ng-if="results">
+    <div class="container" ng-if="search">
+        <img src="../images/loading.gif" alt="Preloader">
+    </div>
+    <div class="container vis-content" ng-if="results">
         <div class="heading">
             <h2 ng-if="!saved">Results</h2>
             <h2 ng-if="saved">Saved Jobs</h2>

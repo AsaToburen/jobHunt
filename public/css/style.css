@@ -5833,6 +5833,13 @@ section.results li {
     padding-left: 6em;
     top: -11px; }
 
+div.vis-content.container {
+  margin-top: 6em; }
+
+div.vis-content.jumbotron {
+  margin-top: 11em;
+  color: #fff; }
+
 section.resume {
   height: 95em; }
   section.resume iframe {

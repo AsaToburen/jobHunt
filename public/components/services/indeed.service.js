@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('jobHunt')
-    .factory('indeedService', ['$http', '$q',
-        function($http, $q) {
+    .factory('indeedService', ['$http', '$q', '$cacheFactory',
+        function($http, $q, $cacheFactory) {
 
             var indeedObj = {
 
@@ -12,16 +12,42 @@ angular.module('jobHunt')
                 searchInput: '',
 
                 searchJobs: function(userInput) {
-                    console.log(indeedObj.searchResults);
+
                     var deferred = $q.defer();
-                    $http.get('/api/search/' + JSON.stringify(userInput))
-                        .success(function(data) {
-                            deferred.resolve(data);
-                        }).error(function(e) {
-                            console.log('Error: ', e);
-                            deferred.reject(e);
-                        });
+
+                    var dataCache = $cacheFactory.get('resultsCache');
+
+                    if (!dataCache) {
+                        dataCache = $cacheFactory('resultsCache');
+                    }
+
+                    var resultsFromCache = dataCache.get('results');
+                    console.log(userInput);
+
+                    if (resultsFromCache) {
+
+                        console.log('returning results from cache');
+                        console.log(resultsFromCache);
+                        deferred.resolve(resultsFromCache);
+
+                    } else {
+
+                        console.log('getting new results data');
+                        $http.get('/api/search/' + JSON.stringify(userInput))
+                            .success(function(data) {
+                                dataCache.put('results', data);
+                                deferred.resolve(data);
+                            }).error(function(e) {
+                                console.log('Error: ', e);
+                                deferred.reject(e);
+                            });
+                    }
                     return deferred.promise;
+                },
+
+                deleteCache: function() {
+                    var dataCache = $cacheFactory.get('resultsCache');
+                    dataCache.remove('results');
                 },
 
                 getJobs: function(keys) {

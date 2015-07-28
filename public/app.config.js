@@ -14,9 +14,13 @@ angular.module('jobHunt')
                 templateUrl: 'components/home/home.view.html',
                 controller: 'homeCtrl'
             })
-            .when('/results/', {
+            .when('/results/:search', {
                 templateUrl: 'components/results/results.view.html',
                 controller: 'resultsCtrl'
+            })
+            .when('/saved/', {
+                templateUrl: 'components/results/results.view.html',
+                controller: 'savedCtrl'
             })
             .when('/jobdetail/:key', {
                 templateUrl: 'components/detail/detail.view.html',

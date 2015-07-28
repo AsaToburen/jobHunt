@@ -5,13 +5,13 @@
             <div class="col-md-8 col-md-offset-3">
                 <form class="navbar-form navbar-left" ng-submit="searchJobs(userInput)">
                     <div class="form-group">
-                        <input type="text" ng-model="userInput.keywords" class="form-control" placeholder="Enter a few keywords">
+                        <input type="text" ng-model="userInput.keywords" class="form-control" placeholder="Enter a few keywords" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" ng-model="userInput.city" class="form-control" placeholder="Provide a city">
+                        <input type="text" ng-model="userInput.city" class="form-control" placeholder="Provide a city" required>
                     </div>
                     <div class="form-group">
-                        <select name="state" ng-model="userInput.state" class="form-control">
+                        <select name="state" ng-model="userInput.state" class="form-control" >
                             <option value="AL">AL</option>
                             <option value="AK">AK</option>
                             <option value="AZ">AZ</option>
@@ -71,4 +71,4 @@
         </div>
     </div>
 </header>
-<results id="results"></results>
+
