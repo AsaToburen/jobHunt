@@ -20,6 +20,11 @@ gulp.task('copy-html-files', function() {
         .pipe(gulp.dest('dist/'));
 });
 
+gulp.task('copyfonts', function() {
+    gulp.src('./public/fonts/bootstrap/*.{ttf,woff,woff2,eof,svg}')
+        .pipe(gulp.dest('dist/fonts/bootstrap'));
+});
+
 gulp.task('images', function() {
     gulp.src('./public/images/*')
         .pipe(cache(imagemin({
@@ -37,7 +42,6 @@ gulp.task('usemin', function() {
                 empty: true
             })],
             css: [autoprefixer('last 2 versions'), minifyCss(), 'concat', rev()],
-            vendorCss: [rev()],
             vendor: [rev()],
             js: [uglify().on('error', function(e) {
                     console.log('\x07', e.message);
@@ -78,4 +82,4 @@ gulp.task('default', function() {
 
 gulp.task('clean', ['clean:dist']);
 
-gulp.task('build', ['copy-html-files', 'images', 'usemin']);
+gulp.task('build', ['copy-html-files', 'copyfonts', 'images', 'usemin']);

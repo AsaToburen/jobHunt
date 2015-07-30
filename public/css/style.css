@@ -5817,7 +5817,9 @@ section.results li {
   section.results li h3 {
     display: inline-block;
     margin-top: .1em;
-    margin-bottom: .7em; }
+    margin-bottom: .7em;
+    max-width: 38em;
+    min-width: 30em; }
   section.results li h5 {
     display: inline-block; }
   section.results li p {
@@ -5849,7 +5851,7 @@ section.resume {
     height: 40em; }
 
 header {
-  height: 54em;
+  height: 57em;
   background-image: url("../images/indeed_bg.jpg");
   background-position: 50% 50%;
   background-size: cover;

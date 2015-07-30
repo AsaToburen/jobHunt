@@ -20,7 +20,6 @@ module.exports.searchJobs = function(req, res) {
             function(results) {
                 // do something with the success results 
                 res.json(results);
-                console.log(results);
             },
             function(error) {
                 // do something with the error results 
@@ -37,7 +36,6 @@ module.exports.getJobs = function(req, res) {
         function(results) {
             // do something with the success results 
             res.json(results);
-            console.log(results);
         },
         function(error) {
             // do something with the error results 

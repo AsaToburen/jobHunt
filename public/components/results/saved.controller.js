@@ -10,7 +10,6 @@ angular.module('jobHunt')
                 .then(function(data) {
                     $scope.saved = true;
                     $scope.results = data.results;
-                    console.log(data.results);  
                 });
         }
     ]);

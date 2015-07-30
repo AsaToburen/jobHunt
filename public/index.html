@@ -6,27 +6,31 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Job Search App</title>
+    <!-- build:css css/style.css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
     <link rel="author" href="humans.txt">
-
 </head>
 
 <body ng-app="jobHunt">
     <ng-view></ng-view>
+    <!-- build:vendor js/vendor.js -->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/app.js -->
     <script src="app.config.js"></script>
     <script src="components/results/dateFilter.js"></script>
     <script src="components/services/indeed.service.js"></script>
-    
     <script src="components/home/home.controller.js"></script>
     <script src="components/resume/resume.controller.js"></script>
     <script src="components/results/results.controller.js"></script>
     <script src="components/results/saved.controller.js"></script>
     <script src="components/detail/detail.controller.js"></script>
     <script src="components/navigation/navigation.directive.js"></script>
+    <!-- endbuild -->
     <script type="text/javascript" src="//api.filepicker.io/v2/filepicker.js"></script>
 </body>
 

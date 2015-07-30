@@ -1,6 +1,9 @@
-
-<navigation></navigation>
+<navigation>
+</navigation>
 <section class="container detail">
+    <div class="container row text-center vis-content" ng-if="search">
+        <img src="../images/loading.gif" alt="Preloader">
+    </div>
     <div class="container vis-content col-md-8 col-md-offset-2">
         <h1>{{jobDetail.jobtitle}}</h1>
         <h4>{{jobDetail.company}}</h4>

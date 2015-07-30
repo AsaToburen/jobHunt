@@ -26,6 +26,8 @@ section.results {
             display: inline-block;
             margin-top: .1em;
             margin-bottom: .7em;
+            max-width: 38em;
+            min-width: 30em;
         }
         h5 {
             display: inline-block;
