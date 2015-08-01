@@ -10,13 +10,5 @@ angular.module('jobHunt')
                 indeedService.searchInput = userInput;
                 $location.path('/results/' + JSON.stringify(userInput));
             };
-
-            $scope.loadSavedJobs = function() {
-                indeedService.getJobs(indeedService.savedJobs)
-                    .then(function(data) {
-                        $scope.saved = true;
-                        $scope.results = data.results;
-                    });
-            };
         }
     ]);

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('jobHunt', ['ngRoute', 'ngResource']);
+angular.module('jobHunt', ['ngRoute', 'ngAnimate']);
 
 angular.module('jobHunt')
     .service('angularFilepicker', ['$window', function($window) {

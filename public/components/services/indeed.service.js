@@ -12,9 +12,7 @@ angular.module('jobHunt')
                 searchInput: '',
 
                 searchJobs: function(userInput) {
-
                     var deferred = $q.defer();
-
                     $http({
                             method: 'GET',
                             url: '/api/search/' + JSON.stringify(userInput),
@@ -42,7 +40,6 @@ angular.module('jobHunt')
                     return deferred.promise;
                 }
             };
-
             return indeedObj;
         }
     ]);

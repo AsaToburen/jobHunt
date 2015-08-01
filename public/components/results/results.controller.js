@@ -15,15 +15,6 @@ angular.module('jobHunt')
                     $scope.results = indeedService.searchResults.results;
                 });
 
-            $scope.loadSavedJobs = function() {
-                indeedService.getJobs(indeedService.savedJobs)
-                    .then(function(data) {
-                        $scope.saved = true;
-                        $scope.search = false;
-                        $scope.results = data.results;
-                    });
-            };
-
             $scope.saveJob = function(jobKey) {
                 if (indeedService.savedJobs.indexOf(jobKey) == -1) {
                     indeedService.savedJobs.push(jobKey);

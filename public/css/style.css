@@ -5835,8 +5835,13 @@ section.results li {
     padding-left: 6em;
     top: -11px; }
 
+div.vis-content.container.ng-enter {
+  opacity: 0; }
+
 div.vis-content.container {
-  margin-top: 6em; }
+  margin-top: 6em;
+  transition: all 1s ease;
+  opacity: 1; }
 
 div.vis-content.jumbotron {
   margin-top: 11em;
